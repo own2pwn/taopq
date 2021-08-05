@@ -80,7 +80,7 @@ target_include_directories(taopq
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-target_link_libraries(taopq PUBLIC ${PostgreSQL_LIBRARIES})
+target_link_libraries(taopq PUBLIC ${PostgreSQL_LIBRARIES} libpgport.a libpgcommon.a)
 
 target_compile_features(taopq PUBLIC cxx_std_17)
 
